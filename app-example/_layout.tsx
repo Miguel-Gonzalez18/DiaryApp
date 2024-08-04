@@ -13,13 +13,7 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    LeagueSpartanRegular: require('../assets/fonts/LeagueSpartan-Regular.ttf'),
-    LeagueSpartanLigth: require('../assets/fonts/LeagueSpartan-Light.ttf'),
-    LeagueSpartanBold: require('../assets/fonts/LeagueSpartan-Bold.ttf'),
-    LeagueSpartanBlack: require('../assets/fonts/LeagueSpartan-Black.ttf'),
-    LeagueSpartanMedium: require('../assets/fonts/LeagueSpartan-Medium.ttf'),
-    LeagueSpartanThin: require('../assets/fonts/LeagueSpartan-Thin.ttf'),
-    LeagueSpartanSemiBold: require('../assets/fonts/LeagueSpartan-SemiBold.ttf'),
+    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
 
   useEffect(() => {
@@ -34,9 +28,9 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack initialRouteName='onboarding'>
-        <Stack.Screen name="index" />
-        <Stack.Screen name="onboarding" options={{ headerShown: false }} />
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
   );
