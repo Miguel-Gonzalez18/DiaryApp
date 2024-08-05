@@ -35,18 +35,20 @@ export function ThemedText({
 
 const styles = StyleSheet.create({
   default: {
-    fontSize: 16,
+    fontSize: 17,
     lineHeight: 24,
+    fontFamily: 'LeagueSpartanRegular',
   },
   defaultSemiBold: {
-    fontSize: 16,
+    fontSize: 17,
     lineHeight: 24,
-    fontWeight: '600',
+    fontFamily: 'LeagueSpartanSemiBold'
+
   },
   title: {
     fontSize: 32,
-    fontWeight: 'bold',
     lineHeight: 32,
+    fontFamily: 'LeagueSpartanSemiBold'
   },
   subtitle: {
     fontSize: 20,
@@ -54,7 +56,7 @@ const styles = StyleSheet.create({
   },
   link: {
     lineHeight: 30,
-    fontSize: 16,
+    fontSize: 17,
     color: '#0a7ea4',
   },
 });
